@@ -3,7 +3,10 @@ import random
 from discord.ext.commands.core import has_permissions
 from discord.ext import commands
 
-token = "ODU0MDA2NzQ2NTczNTcwMTEx.YMdpww._cpULg0mbF6hNY8FQv8RvUA__5s"
+with open("Token.txt") as f:
+    contents = f.read()
+
+token = contents
 
 description = "Brian's best boi in python"
 client = commands.Bot(command_prefix="o7", description=description)
