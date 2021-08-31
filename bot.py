@@ -8,7 +8,7 @@ with open("Token.txt") as f:
 
 token = contents
 
-description = "Brian's best boi in python"
+description = "I am Brian's Best Boi and these are my commands: "
 client = commands.Bot(command_prefix="o7", description=description)
 # intents = discord.Intents.default()
 # intents.members = True
@@ -21,7 +21,7 @@ async def on_ready():
     print(client.user.id)
     print("________")
 
-@client.command()
+@client.command(description="Latancy check")
 async def ping(ctx):
     await ctx.send(f"pong! {round(client.latency * 1000)}ms")
 
