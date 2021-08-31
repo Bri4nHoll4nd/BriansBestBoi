@@ -59,4 +59,10 @@ async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f"{member} was kicked from the server")
 
+@client.command()
+async def secret(ctx):
+    responses = ["eats ass on a regular basis!",
+                 "is dumb as fuck!"]
+    await ctx.send(f"{ctx.author.mention} {random.choice(responses)}")
+
 client.run(token)
